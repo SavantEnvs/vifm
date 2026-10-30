@@ -1,0 +1,9 @@
+project: savantenvs/vifm
+target: fuzz_variables
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_variables/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_variables
+    libfuzzer: true
+    timeout: 10
