@@ -1,0 +1,9 @@
+project: savantenvs/vifm
+target: fuzz_trie-mined-e8c66b6
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_trie-mined-e8c66b6/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_trie -max_len=65536
+    libfuzzer: true
+    timeout: 10
